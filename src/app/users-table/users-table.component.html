@@ -1,0 +1,24 @@
+<div class="container">
+    <table>
+        <thead class="background-secondary">
+          <tr>
+            <th >NAME</th>
+            <th>E-MAIL</th>
+            <th>NUMBER OF POSTS</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let user of users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.posts }}</td>
+                <td>
+                    <div (click)="userEditClick(user)" class="icon icon-edit"></div>
+                    <div (click)="userRemoveClick(user)" class="icon icon-remove"></div>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+
+</div>

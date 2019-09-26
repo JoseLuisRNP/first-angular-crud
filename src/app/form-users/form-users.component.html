@@ -1,0 +1,57 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header s-padding">
+      <h2 class="text-header first-capital-letter">{{ type }} row</h2>
+    </div>
+    <div class="modal-body s-padding">
+      <form>
+        <div class="form-control">
+          <label class="label" for="name">Name</label>
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="John Doe"
+            [value]="user.name"
+            [(ngModel)]="user.name"
+            [ngClass]="{
+              'input-disabled': type ==='remove'
+            }"
+            [disabled]="type !== 'remove' ? false : true"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label class="label" for="mail">E-mail</label>
+          <input
+            class="input"
+            type="email"
+            name="email"
+            [value]="user.email"
+            placeholder="johndoe@company.com"
+            [(ngModel)]="user.email"
+            [ngClass]="{
+              'input-disabled': type ==='remove'
+            }"
+            [disabled]="type !== 'remove' ? false : true"
+            required
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn" (click)="cancelForm()">CANCEL</button>
+      <button
+        class="btn"
+        [ngClass]="{
+          'btn-primary': type!=='remove',
+          'btn-danger': type ==='remove'
+        }"
+        (click)="handleSubmit()"
+        type="submit">
+        {{ type !== "remove" ? "SAVE" : "REMOVE" }}
+      </button>
+    </div>
+  </div>
+</div>

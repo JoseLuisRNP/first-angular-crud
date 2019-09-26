@@ -1,0 +1,84 @@
+$primary: #EEE;
+$secondary:#4E5E5F;
+$light: #FFF;
+$success:#4FBA92;
+$border: #D8D8D8;
+
+.container {
+  display: table;
+  padding: 5%;
+  background-color: $light;
+  box-shadow: 0 10px 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.background-secondary {
+  background-color: $secondary;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  background-color: $success;
+  visibility: hidden;
+}
+
+.icon-edit {
+  -webkit-mask: url(../../assets/edit-small.svg);
+  mask: url(../../assets/edit-small.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+}
+
+.icon-remove {
+  -webkit-mask: url(../../assets/delete.svg);
+  mask: url(../../assets/delete.svg);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $light;
+  margin: 0 auto;
+}
+
+th {
+  color: $light;
+  border-top: 3px solid;
+  border-collapse: collapse;
+  text-align: left;
+  padding: 1.5em;
+}
+
+th:not(:last-child){
+  border-right: 3px solid $light;
+}
+
+
+td {
+  text-align: left;
+  padding: 1.5em;
+  border: 3px solid $border;
+  border-collapse: collapse;
+  min-width: 5em;
+  &:last-child {
+    text-align: center;
+  }
+
+}
+
+
+tbody > tr:hover {
+  background-color: $primary;
+  & .icon{
+    visibility: visible
+  }
+}
+
+
+

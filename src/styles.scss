@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+
+//Colors
+$primary: #EEE;
+$secondary:#4E5E5F;
+$success:#4FBA92;
+$danger: #BE382B;
+$light: #FFF;
+$border: #D8D8D8;
+//Font
+$font: 'Arvo', serif;
+
+body {
+  background-color: $primary;
+  font-family: $font;
+  color: $secondary;
+}
+
+.btn {
+  background-color: inherit;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 300px;
+}
+
+.btn-primary {
+  background-color: $success;
+  color: $primary
+}
+
+.btn-danger {
+  background-color: $danger;
+  color: $primary
+}
+
